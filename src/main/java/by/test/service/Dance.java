@@ -24,7 +24,21 @@ public class Dance {
 
     }
 
-    
+    public void dance() {
+        int[] n = dancer.danceCode;
+
+        for (int i = 0; i < n.length; i++) {
+            if (n[i] % 2 != 0) {
+                back(n[i], i);
+            } else {
+            forward(n[i]);}
+           /* System.out.print("i = " + i + " ");
+            System.out.print("n[" + i + "] = " + n[i] + " ");
+            System.out.print("position = " + position + " ");
+            System.out.println("steps = " + steps);*/
+        }
+
+    }
 
     private void forward(int num) {
         if (position + num <= size) {
