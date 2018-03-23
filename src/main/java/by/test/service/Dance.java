@@ -26,6 +26,17 @@ public class Dance {
 
     
 
+    private void forward(int num) {
+        if (position + num <= size) {
+            steps += num;
+            position += num;
+        } else {
+            steps += position;
+            position = 0;
+        }
+
+    }
+
     private void back(int num, int i) {
 
         if (i != 0) {
